@@ -336,7 +336,7 @@ if(SWIG_FOUND)
   #library for Javascript / node.js
   find_program(NODE_EXECUTABLE node)
   get_filename_component(NODE_DIR ${NODE_EXECUTABLE} DIRECTORY)
-  find_path(NODEJS_INCLUDE_DIRS NAMES node.h PATHS ${Nodejs_ROOT} ${Nodejs_ROOT}/include ${NODE_DIR}/../include/node)
+  find_path(NODEJS_INCLUDE_DIRS NAMES node.h PATHS ${Nodejs_ROOT} ${Nodejs_ROOT}/include ${NODE_DIR}/../include/node ${NODE_DIR}/../local/include/node/)
   if (NODEJS_INCLUDE_DIRS)
     message("Bindings for node.js will be generated")
     message("Using NODEJS_INCLUDE_DIRS=${NODEJS_INCLUDE_DIRS}")
